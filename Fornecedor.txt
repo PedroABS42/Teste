@@ -1,0 +1,49 @@
+package OO;
+
+public class Fornecedor {
+
+	String cnpj;
+	String nome;
+	String nomeFantasia;
+	String dataDeFundacao;
+	Endereco endereco;
+	String email;
+	String tipoDeServico;
+	static int codigoFornecedor;
+	
+	private static Fornecedor _instance;
+	
+	private Fornecedor(String cnpj){	//construtor da classe
+		if (cnpj == null){		//confere se já existe cadastro com esse CNPJ
+		this.cnpj = cnpj;
+		this.nome = nome;
+		this.nomeFantasia = nomeFantasia;
+		this.dataDeFundacao = dataDeFundacao;
+		this.endereco = endereco;
+		this.tipoDeServico = tipoDeServico;
+		codigoFornecedor++;
+		
+		}
+		
+	}
+	
+	public static Fornecedor getFornecedor(String cnpj){
+		if (_instance == null){
+			_instance = new Fornecedor(cnpj);
+		}
+		return _instance;
+	}
+	
+	public void buscaCodigo(String codigoFornecedor){
+		if (this.codigoFornecedor == Fornecedor.codigoFornecedor) {
+			
+		System.out.println("CNPJ do Fornecedor: "+ this.cnpj);
+		System.out.println("Código do Fornecedor: "+ this.codigoFornecedor);
+		}
+	}
+	public void remover(String cnpj){
+		if (!(cnpj == null)) {		//se o CNPJ conter alguma informação
+			cnpj = null;
+		}
+	}
+}

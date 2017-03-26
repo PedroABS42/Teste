@@ -1,0 +1,31 @@
+
+public class Cliente {
+
+	String codigo;
+	String nome;
+	String idade;
+	String email;
+	String cpf;
+	String data;
+	Endereco end = new Endereco();
+
+	private Cliente (String cpf){
+		if(cpf == null){
+			this.cpf = cpf;
+		}
+	}
+	
+	public static boolean removerCliente(String codigo){
+	
+		//entrada = Cliente;
+		if (Cliente != null) {
+		Cliente = null; 
+		return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public static boolean cadastrarCliente( ){
+	
+}

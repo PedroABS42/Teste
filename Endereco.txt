@@ -1,0 +1,19 @@
+package OO;
+
+public class Endereco {
+
+		String rua;
+		String bairro;
+		String numero;
+		String complemento;
+		String cep;
+		
+		public Endereco(String rua, String bairro, String numero, String cep) {
+			
+			this.rua = rua;
+			this.bairro = bairro;
+			this.numero = numero;
+			this.cep = cep;
+			
+		}
+}

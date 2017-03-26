@@ -1,0 +1,97 @@
+package OO;
+
+import java.util.Scanner;
+
+public class Principal {
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		
+		int escolha;
+		String aux = new String();
+		Fornecedor f1 = null;
+		
+		
+		do {	//MENU de escolha do programa
+		System.out.println("Digite a opção do programa deseja acessar");
+		System.out.println("1 - Cadastro de Cliente");
+		System.out.println("2 - Remoção de Cliente");
+		System.out.println("3 - Busca de Cliente");
+		System.out.println("4 - Cadastro de Fornecedor");
+		System.out.println("5 - Remoção de Fornecedor");
+		System.out.println("6 - Busca de Fornecedor");
+		System.out.println("0 - Sair");
+		
+		escolha = in.nextInt();
+		in.nextLine();
+		
+		switch (escolha) {
+		case 1:
+			
+			break;
+			
+		case 2:
+			do {
+			System.out.println("Digite o método de remoção deseja usar");
+			System.out.println("1 - Remover cliente pelo CPF");
+			System.out.println("2 - Remover cliente pelo Nome");
+			System.out.println("0 - Sair");
+			escolha = in.nextInt();
+
+			if (escolha == 1) {
+				
+			}
+			if (escolha == 2) {
+				
+			}
+			} while (escolha != 0);
+			break;
+			
+		case 3:
+			do {
+			System.out.println("Digite o método de busca que deseja usar");
+			System.out.println("1 - Busca pelo código");
+			System.out.println("2 - Busca pelo bairro");
+			System.out.println("0 - Sair");
+			escolha = in.nextInt();
+			if (escolha == 1){
+				
+			}
+			if (escolha == 2){
+				
+			}
+			} while (escolha != 0);
+			break;
+			
+		case 4:
+			System.out.println("Insira o número do CNPJ do Fornecedor");
+			aux = in.nextLine();
+			f1.getFornecedor(aux);
+			
+			break;
+			
+		case 5:
+			
+			break;
+			
+		case 6:
+			do {
+			System.out.println("Digite o método de busca que deseja usar");
+			System.out.println("1 - Busca pelo código");
+			System.out.println("2 - Busca pelo tipo de serviço");
+			System.out.println("0 - Sair");
+			escolha = in.nextInt();
+			if (escolha == 1) {
+				System.out.println("Insira o código do Fornecedor");
+				aux = in.nextLine();
+				f1.buscaCodigo(aux);
+			}
+			
+			} while (escolha != 0);
+			break;
+		}
+		} while (escolha != 0);
+		
+	in.close();
+	}
+}
